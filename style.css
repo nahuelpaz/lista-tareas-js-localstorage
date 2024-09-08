@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+}
+
+body {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  }
+
+  .content {
+    background-color: white;
+    width: 80%;
+    min-height: 80dvh;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: 200ms;
+    border-bottom-right-radius: 10px;
+
+}
+
+  .content:hover{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.555);
+  }
+
+  .content__title {
+    font-size: 44px;
+    background-color: black;
+    color: white;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+
+
+  .content__form {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 20px 0;
+    border-bottom: 2px solid black;
+  }
+
+
+  .content__form input {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    border: 1px solid black;
+    transition: 200ms;
+  }
+
+  .content__form input:focus {
+    background-color: rgb(255, 186, 59);
+    outline: none;
+    border: 1px solid rgba(214, 214, 214, 0);
+  }
+
+  .content__form input::placeholder {
+    color: black;
+    font-weight: bold;
+  }
+
+
+  .content__form button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .content__lista {
+    max-height: 70dvh;
+    overflow-x: auto;
+    text-decoration: none;
+}
+
+
+  .content__lista li {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+
+  }
+
+  .btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: 500ms;
+  }
+
+  .btn:hover{
+    border: 1.5px solid black;
+  }
+
+  .btn-eliminar {
+    background-image: url(/img/borrar.png);
+  }
+
+  .btn-editar {
+    background-image: url(/img/editar.png);
+  }
+
+  .btn-enviar {
+    background-image: url(/img/agregar.png);
+  }
+
+  .spanContenido {
+    min-width: 200px;
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 18px;
+  }
+
+
+/* Estilo general del scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+  }
+  
+  /* Estilo de la pista del scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+  
+  /* Estilo del pulgar del scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ffe600, #cf690a); /* Color del pulgar con degradado */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #ccc; /* Borde alrededor del pulgar */
+  }
+  
+  /* Estilo cuando el pulgar está en estado de hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ffbb00, #e66b06); /* Color de fondo al pasar el ratón */
+  }
+  
+  @media screen and (max-width:800px) {
+    .content__title{
+        font-size: 28px;
+    }
+
+    .content{
+        width: 90%;
+    }
+  }
